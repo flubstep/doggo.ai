@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 256px;
+  animation: App-logo-fade-in 3s ease-in;
+}
+
+.App-title {
+  font-size: 48px;
+  font-weight: 300;
+  animation: App-subtitle-fade-in 2s ease-in;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-subtitle-fade-in {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes App-logo-fade-in {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
