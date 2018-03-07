@@ -14,19 +14,32 @@
 .App-title {
   font-size: 48px;
   font-weight: 300;
-  animation: App-subtitle-fade-in 2s ease-in;
+  animation: App-title-fade-in 2s ease-in;
+}
+
+.App-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  animation: App-subtitle-fade-in 4s ease-in;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-subtitle-fade-in {
+@keyframes App-title-fade-in {
   0% { opacity: 0; }
   25% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 1; }
 }
+
+@keyframes App-subtitle-fade-in {
+  0% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 @keyframes App-logo-fade-in {
   0% { opacity: 0; }
