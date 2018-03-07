@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="210px" viewBox="0 0 400 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>doggo-large-image</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="doggo-large-image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="DoggoAI" font-family="HarmoniaSansW01-Semibold" font-size="48" font-weight="500" letter-spacing="-1.3499999">
+            <tspan x="107" y="172" fill="#9013FE">Doggo</tspan>
+            <tspan x="247.61" y="172" letter-spacing="-1.01249993" fill="#FF0000">AI</tspan>
+        </text>
+        <g id="Doggo" transform="translate(87.000000, 23.000000)">
+            <path d="M0,72.0849047 C86.5533854,19.7574682 131.800456,-3.76595052 135.741211,1.51464844 C139.681966,6.7952474 155.385417,24.0225952 182.851562,53.1966917 C187.054687,53.1966917 194.123698,53.1966917 204.058594,53.1966917 C204.058594,60.8144531 198.643283,92.4166712 182.851562,101 C170.39272,101 151.857962,101 127.247289,101" id="Head" stroke="#3A006C" stroke-width="7"></path>
+            <path d="M74,81 C76.4578797,88.5544999 80.2291438,93.855994 85.3137922,96.9044823 C90.3984406,99.9529707 105.627177,101.299608 131,100.944394" id="Cheek" stroke="#3A006C" stroke-width="7"></path>
+            <path d="M119,29.5650634 C108.515299,17.2659678 95.2141927,9.10235281 79.0966797,5.07421841 C63.8974609,29.3925778 50.8652344,47.3421222 40,58.9228516 C67.2851562,58.9228512 95.3632812,58.9384762 119,29.5650634 Z" id="Solid-Ear" fill="#3A006C" transform="translate(79.500000, 31.998535) scale(-1, -1) translate(-79.500000, -31.998535) "></path>
+        </g>
+    </g>
+</svg>
