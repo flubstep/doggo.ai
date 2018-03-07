@@ -6,20 +6,28 @@
   min-height: 100vh;
 }
 
+.App-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-logo {
-  height: 256px;
-  animation: App-logo-fade-in 3s ease-in;
+  height: 196px;
+  animation: App-logo-fade-in 2s ease-in;
 }
 
 .App-title {
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 300;
-  animation: App-title-fade-in 2s ease-in;
+  animation: App-title-fade-in 3s ease-in;
 }
 
 .App-subtitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
+  width: 280px;
   animation: App-subtitle-fade-in 4s ease-in;
 }
 
@@ -27,10 +35,16 @@
   font-size: large;
 }
 
-@keyframes App-title-fade-in {
+@keyframes App-logo-fade-in {
   0% { opacity: 0; }
   25% { opacity: 0; }
   50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes App-title-fade-in {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
@@ -40,9 +54,10 @@
   100% { opacity: 1; }
 }
 
-
-@keyframes App-logo-fade-in {
-  0% { opacity: 0; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+@media (min-width: 640px) {
+  .App-title { font-size: 48px; }
+  .App-subtitle {
+    font-size: 24px;
+    width: auto;
+  }
 }
