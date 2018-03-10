@@ -32,3 +32,8 @@ input {
     color: #444;
     cursor: auto;
 }
+
+.btn.disabled:hover {
+    background-color: transparent;
+    color: #444;
+}

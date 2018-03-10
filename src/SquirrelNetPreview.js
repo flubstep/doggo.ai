@@ -201,7 +201,7 @@ class SquirrelNetPreview extends Component {
             >
             <input onChange={this.onChange} value={this.state.url} placeholder="...or try your own squirrel image url" />
             <span
-              onClick={this.onSubmit}
+              onClick={this.state.url ? this.onSubmit : null}
               className={'btn flex-centered' + (this.state.url ? '' : ' disabled')}
               >
               Annotate
