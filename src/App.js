@@ -13,7 +13,7 @@ class App extends Component {
           <h1 className="App-title">Fetching wow intelligence for good doggos.</h1>
           <h2 className="App-subtitle">Deep Learning. Blockchains. The Internet of Doge.</h2>
         </div>
-        <SquirrelNetPreview />
+        { window.innerWidth > 800 ? (<SquirrelNetPreview />) : null }
       </div>
     );
   }
