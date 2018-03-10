@@ -183,6 +183,7 @@ class SquirrelNetPreview extends Component {
                   className="preview-square"
                   >
                   <img
+                    alt="An example of a squirrel"
                     className="preview-image"
                     src={p.thumb}
                     />

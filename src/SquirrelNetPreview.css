@@ -75,6 +75,11 @@
     flex-direction: column;
 }
 
+.SquirrelNetPreview .annotation-meta .btn {
+    font-size: 16px;
+    width: 100%;
+}
+
 .SquirrelNetPreview .bounding-box {
     border: 3px solid #2286c3;
     cursor: pointer;
