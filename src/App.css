@@ -1,21 +1,28 @@
-.App {
-  text-align: center;
+.flex-centered {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+}
+
+.flex-centered-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  text-align: center;
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 90vh;
 }
 
 .App-logo {
   height: 196px;
-  animation: App-logo-fade-in 2s ease-in;
+  animation: App-logo-fade-in 1s ease-in;
 }
 
 .App-title {
@@ -23,14 +30,14 @@
   font-weight: 300;
   width: 280px;
   margin: 10px;
-  animation: App-title-fade-in 3s ease-in;
+  animation: App-title-fade-in 1.5s ease-in;
 }
 
 .App-subtitle {
   font-size: 20px;
   font-weight: 300;
   width: 280px;
-  animation: App-subtitle-fade-in 4s ease-in;
+  animation: App-subtitle-fade-in 2s ease-in;
 }
 
 .App-intro {

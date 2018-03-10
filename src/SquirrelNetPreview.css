@@ -1,0 +1,53 @@
+.SquirrelNetPreview {
+  height: 100vh;
+  width: 100%;
+  background-color: #333333;
+}
+
+.SquirrelNetPreview h1,
+.SquirrelNetPreview h2,
+.SquirrelNetPreview p {
+    color: white;
+    max-width: 620px;
+}
+
+.SquirrelNetPreview input {
+    width: 440px;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    padding: 0 10px;
+    color: white;
+}
+
+.SquirrelNetPreview img {
+    border: 1px solid #999;
+}
+
+.SquirrelNetPreview .preview-input {
+    margin: 20px;
+}
+
+.SquirrelNetPreview .bounding-box {
+    border: 3px solid #2286c3;
+    cursor: pointer;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.SquirrelNetPreview .bounding-box .label {
+    opacity: 0;
+    transition: all 80ms ease-in-out;
+}
+
+.SquirrelNetPreview .bounding-box:hover .label {
+    opacity: 1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0d47a1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.0); }
+  10% { transform: scale(1.1); }
+  20% { transform: scale(1.0); }
+}
