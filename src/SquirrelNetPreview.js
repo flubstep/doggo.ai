@@ -117,12 +117,16 @@ class SquirrelNetPreview extends Component {
           <div className="btn flex-centered" onClick={this.reset}>Reset</div>
         </div>
       );
-    } else if (this.state.annotatedResponse) {
+    } else if (
+      this.state.annotatedResponse &&
+      this.state.annotatedResponse.image
+      ) {
       let {
         image,
         timetaken,
         annotations
       } = this.state.annotatedResponse;
+      annotations = annotations || [];
       annotations = annotations.filter(a => a.score > 0.9);
       const scale = this.getImageScale(image.height, image.width);
       const numSquirrels = annotations.length;
