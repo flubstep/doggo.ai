@@ -17,6 +17,7 @@
 }
 
 .App-header {
+  position: relative;
   height: 90vh;
 }
 
@@ -42,6 +43,11 @@
 
 .App-intro {
   font-size: large;
+}
+
+.next-arrow {
+  position: absolute;
+  bottom: 10px;
 }
 
 @keyframes App-logo-fade-in {

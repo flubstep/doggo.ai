@@ -94,9 +94,9 @@ class SquirrelNetPreview extends Component {
         annotations
       } = this.state.annotatedResponse;
       const scale = this.getImageScale(image.height, image.width);
+      const numSquirrels = annotations.length;
       return (
         <div className="SquirrelNetPreview flex-centered">
-          <p>Analysis time: {Math.round(timetaken * 1000) / 1000}s</p>
           <div
             style={{
               position: 'relative',
@@ -130,7 +130,13 @@ class SquirrelNetPreview extends Component {
               width={image.width * scale}
             />
           </div>
-          <div className="btn flex-centered" onClick={this.reset}>Reset</div>
+          <div className="annotation-meta">
+            <span>
+              <span className="meta-key">Analysis time</span>: <span style={{ color: '#bbdefb' }}>{Math.round(timetaken * 1000) / 1000}s. </span>
+              <span className="meta-key">Squirrels found</span>: <span style={{ color: '#f8bbd0' }}>{numSquirrels}</span>.
+            </span>
+            <span className="btn flex-centered" onClick={this.reset}>Reset</span>
+          </div>
         </div>
       );
     } else {

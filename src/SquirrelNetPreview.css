@@ -27,6 +27,16 @@
     margin: 20px;
 }
 
+.SquirrelNetPreview .annotation-meta {
+    color: white;
+    margin: 20px;
+    font-size: 12px;
+}
+
+.SquirrelNetPreview .meta-key {
+
+}
+
 .SquirrelNetPreview .bounding-box {
     border: 3px solid #2286c3;
     cursor: pointer;
