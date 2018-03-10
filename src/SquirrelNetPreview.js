@@ -3,6 +3,25 @@ import FontAwesome from 'react-fontawesome';
 
 import './SquirrelNetPreview.css';
 
+const PREVIEWS = [
+  {
+    url: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel01.jpg',
+    thumb: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel01_thumbnail.png'
+  },
+  {
+    url: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel02.jpg',
+    thumb: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel02_thumbnail.png'
+  },
+  {
+    url: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel03.jpg',
+    thumb: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel03_thumbnail.png'
+  },
+  {
+    url: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel04.jpg',
+    thumb: 'https://s3-us-west-2.amazonaws.com/doggoai/squirrel04_thumbnail.png'
+  },
+];
+
 class SquirrelNetPreview extends Component {
 
   constructor(props, context) {
@@ -59,6 +78,10 @@ class SquirrelNetPreview extends Component {
         error: 'Exception thrown from server'
       });
     }
+  }
+
+  setUrlAndSubmit = (url) => {
+    this.setState({ url }, this.onSubmit);
   }
 
   reset = () => {
@@ -149,11 +172,27 @@ class SquirrelNetPreview extends Component {
       return (
         <div className="SquirrelNetPreview flex-centered">
           <h2>Squirrel detection with advanced CSS positioned bounding boxes for real-time doggos.</h2>
+          <div className="preview-grid">
+            {
+              PREVIEWS.map(p => (
+                <div
+                  key={p.url}
+                  onClick={() => this.setUrlAndSubmit(p.url)}
+                  className="preview-square"
+                  >
+                  <img
+                    className="preview-image"
+                    src={p.thumb}
+                    />
+                </div>
+              ))
+            }
+          </div>
           <form
             className="preview-input flex-centered-row"
             onSubmit={this.onSubmit}
             >
-            <input onChange={this.onChange} value={this.state.url} placeholder="Try your own squirrel image url" />
+            <input onChange={this.onChange} value={this.state.url} placeholder="...or try your own squirrel image url" />
             <span
               onClick={this.onSubmit}
               className={'btn flex-centered' + (this.state.url ? '' : ' disabled')}

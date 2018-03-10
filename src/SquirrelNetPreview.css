@@ -33,6 +33,36 @@
     animation: breathe 2s ease-in-out infinite;
 }
 
+.SquirrelNetPreview .preview-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.SquirrelNetPreview .preview-square {
+    padding: 0;
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+}
+
+.SquirrelNetPreview .preview-image {
+    height: 150px;
+    width: 150px;
+    padding: 0;
+    margin: 0px 5px;
+    border: none;
+    transition: all 160ms ease-in-out;
+    cursor: pointer;
+}
+
+.SquirrelNetPreview .preview-image:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
 .SquirrelNetPreview .preview-input {
     margin: 20px;
     flex-direction: column;
@@ -43,10 +73,6 @@
     margin: 20px;
     font-size: 12px;
     flex-direction: column;
-}
-
-.SquirrelNetPreview .meta-key {
-
 }
 
 .SquirrelNetPreview .bounding-box {
@@ -79,5 +105,8 @@
 @media (min-width: 640px) {
     .SquirrelNetPreview .preview-input {
        flex-direction: row;
+    }
+    .SquirrelNetPreview .preview-image {
+        opacity: 0.7;
     }
 }
