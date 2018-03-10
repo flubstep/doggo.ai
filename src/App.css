@@ -48,6 +48,7 @@
 .next-arrow {
   position: absolute;
   bottom: 10px;
+  animation: App-subtitle-fade-in 2s ease-in;
 }
 
 @keyframes App-logo-fade-in {
