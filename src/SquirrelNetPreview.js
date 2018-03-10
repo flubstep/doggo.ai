@@ -47,13 +47,13 @@ class SquirrelNetPreview extends Component {
       } else {
         this.setState({
           loading: false,
-          error: 'Something went wrong...'
+          error: 'Error response from server'
         });
       }
     } catch (e) {
       this.setState({
         loading: false,
-        error: 'Something went wrong...'
+        error: 'Exception thrown from server'
       });
     }
   }
