@@ -1,18 +1,23 @@
 .SquirrelNetPreview {
-  height: 100vh;
-  width: 100%;
-  background-color: #333333;
+    height: 100vh;
+    width: 100%;
+    background-color: #333333;
 }
 
 .SquirrelNetPreview h1,
 .SquirrelNetPreview h2,
 .SquirrelNetPreview p {
     color: white;
+    width: 90%;
     max-width: 620px;
+}
+.SquirrelNetPreview form {
+    width: 100%;
 }
 
 .SquirrelNetPreview input {
-    width: 440px;
+    width: 90%;
+    max-width: 480px;
     background-color: transparent;
     border-width: 0 0 1px 0;
     padding: 0 10px;
@@ -23,14 +28,21 @@
     border: 1px solid #999;
 }
 
+.SquirrelNetPreview .loading {
+    color: white;
+    animation: breathe 2s ease-in-out infinite;
+}
+
 .SquirrelNetPreview .preview-input {
     margin: 20px;
+    flex-direction: column;
 }
 
 .SquirrelNetPreview .annotation-meta {
     color: white;
     margin: 20px;
     font-size: 12px;
+    flex-direction: column;
 }
 
 .SquirrelNetPreview .meta-key {
@@ -52,13 +64,20 @@
     background-color: #2286c3;
 }
 
-@keyframes zoom-in {
-    0% { transform: scale(0); }
-    100% { transform: scale(1); }
+@keyframes pulse {
+    0% { transform: scale(1.0); }
+    10% { transform: scale(1.1); }
+    20% { transform: scale(1.0); }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1.0); }
-  10% { transform: scale(1.1); }
-  20% { transform: scale(1.0); }
+@keyframes breathe {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.0); }
+}
+
+@media (min-width: 640px) {
+    .SquirrelNetPreview .preview-input {
+       flex-direction: row;
+    }
 }

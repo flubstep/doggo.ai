@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import FontAwesome from 'react-fontawesome';
 
 import './SquirrelNetPreview.css';
-import './loading.css';
 
 class SquirrelNetPreview extends Component {
 
@@ -22,7 +22,10 @@ class SquirrelNetPreview extends Component {
     });
   }
 
-  async onSubmit() {
+  async onSubmit(e) {
+    if (e) {
+      e.preventDefault();
+    }
     this.setState({
       loading: true
     });
@@ -77,7 +80,10 @@ class SquirrelNetPreview extends Component {
     if (this.state.loading) {
       return (
         <div className="SquirrelNetPreview flex-centered">
-          <h2 className="loader">Loading...</h2>
+          <div className="loading">
+            <FontAwesome name="paw" size="2x" />
+            <p>Fetching...</p>
+          </div>
         </div>
       );
     } else if (this.state.error) {
@@ -130,7 +136,7 @@ class SquirrelNetPreview extends Component {
               width={image.width * scale}
             />
           </div>
-          <div className="annotation-meta">
+          <div className="annotation-meta flex-centered">
             <span>
               <span className="meta-key">Analysis time</span>: <span style={{ color: '#bbdefb' }}>{Math.round(timetaken * 1000) / 1000}s. </span>
               <span className="meta-key">Squirrels found</span>: <span style={{ color: '#f8bbd0' }}>{numSquirrels}</span>.
