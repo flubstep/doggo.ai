@@ -118,11 +118,12 @@ class SquirrelNetPreview extends Component {
         </div>
       );
     } else if (this.state.annotatedResponse) {
-      const {
+      let {
         image,
         timetaken,
         annotations
       } = this.state.annotatedResponse;
+      annotations = annotations.filter(a => a.score > 0.9);
       const scale = this.getImageScale(image.height, image.width);
       const numSquirrels = annotations.length;
       return (
