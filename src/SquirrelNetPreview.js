@@ -86,6 +86,7 @@ class SquirrelNetPreview extends Component {
 
   reset = () => {
     this.setState({
+      url: '',
       error: null,
       annotatedResponse: null
     });
